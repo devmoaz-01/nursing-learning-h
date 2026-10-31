@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: nurselearn
+    runtime: docker
+    plan: free
+    region: frankfurt
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: NURSELEARN_PUBLIC_BASE_URL
+        sync: false
+      - key: NURSELEARN_AI_BASE_URL
+        value: https://generativelanguage.googleapis.com/v1beta/openai
+      - key: NURSELEARN_AI_API_KEY
+        sync: false
+      - key: NURSELEARN_AI_MODEL
+        value: gemini-3.8-flash

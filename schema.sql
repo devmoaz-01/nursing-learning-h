@@ -1,0 +1,4 @@
+-- NurseLearn supports SQLite and PostgreSQL through SQLAlchemy.
+-- The canonical schema is defined in models.py and upgraded by
+-- backend/database/migrations.py. Do not execute ad-hoc DDL from this file.
+-- Database migrations should be run explicitly and backed up beforehand.
